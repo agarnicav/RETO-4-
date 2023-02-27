@@ -52,12 +52,12 @@ d. Se repite el proceso a partir del paso 5a hasta que no queden más grupos de 
 
 
 ## pseucodigo 
-Variables 
-n = Real 
-x = Real
-a = Real
-Inicio 
-funcion aritmetica_baldor(n):
+     Variables 
+     n = Real 
+     x = Real
+     a = Real
+     Inicio 
+     funcion aritmetica_baldor(n):
     // Paso 1:  ingresar n y dividir el número en grupos de dos cifras
     digits = [int(d) para d in str(n)]
     si len(digits) % 2 != 0:
