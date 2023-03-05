@@ -58,18 +58,15 @@ d. Se repite el proceso a partir del paso 5a hasta que no queden más grupos de 
      a = Real
      Inicio 
      funcion aritmetica_baldor(n):
-    // Paso 1:  ingresar n y dividir el número en grupos de dos cifras
     digits = [int(d) para d in str(n)]
     si len(digits) % 2 != 0:
         digits = [0] + digits
     groups = [int(str(digits[i])+str(digits[i+1])) para i en rango(0, len(digits), 2)]
     
-    // Paso 2: Buscar el mayor número cuyo cuadrado sea menor o igual al primer grupo de dos cifras
     a = entero(raiz_cuadrada(groups[0]))
     res = groups[0] - a**2
     resultado = [a]
-    
-    // Paso 3: Repetir el proceso para los grupos de dos cifras restantes
+
     para i en rango(1, len(groups)):
         res = res*100 + groups[i]
         x = 0
@@ -84,5 +81,5 @@ d. Se repite el proceso a partir del paso 5a hasta que no queden más grupos de 
         resultado.append(x-1)
         res = res - (x-1)**2
     
-    // Paso 4: Escribir la raíz cuadrada aproximada del número original
+   Escribir la raíz cuadrada aproximada del número original
     devolver entero(concatenar(resultado))
